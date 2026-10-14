@@ -1,0 +1,158 @@
+.login-route {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 32px 16px;
+  overflow: hidden;
+  background-color: var(--bg);
+}
+
+.login-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(15, 23, 30, 0.95),
+      rgba(15, 23, 30, 0.75)
+    ),
+    url('https://assets.ccbp.in/frontend/react-js/movies-app/no-time-to-die-movie-background-v0.png');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+}
+
+.login-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 36px 34px 30px 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-color: rgba(15, 23, 30, 0.94);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.65);
+}
+
+.login-logo {
+  width: 148px;
+  margin-bottom: 26px;
+}
+
+.login-heading {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.login-subheading {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 26px;
+  line-height: 1.5;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.input-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 7px;
+}
+
+.login-input {
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg-elevated);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.login-input::placeholder {
+  color: #647585;
+}
+
+.login-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 168, 225, 0.22);
+}
+
+.login-error-message {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--danger);
+  margin-bottom: 14px;
+}
+
+.login-button {
+  height: 44px;
+  margin-top: 6px;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--accent);
+  color: #0f171e;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login-button:hover,
+.login-button:focus-visible {
+  background-color: var(--accent-hover);
+}
+
+.login-button:disabled {
+  background-color: var(--accent-dark);
+  cursor: not-allowed;
+}
+
+.login-terms {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .login-form {
+    padding: 28px 22px 24px 22px;
+    background-color: rgba(15, 23, 30, 0.9);
+  }
+
+  .login-logo {
+    width: 124px;
+    margin-bottom: 20px;
+  }
+
+  .login-heading {
+    font-size: 22px;
+  }
+
+  .login-subheading {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+}

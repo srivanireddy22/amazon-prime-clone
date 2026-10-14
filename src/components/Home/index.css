@@ -1,0 +1,144 @@
+.home-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 74vh;
+  max-height: 720px;
+  padding-bottom: 56px;
+  overflow: hidden;
+}
+
+.hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(15, 23, 30, 0.94) 0%,
+      rgba(15, 23, 30, 0.72) 42%,
+      rgba(15, 23, 30, 0.15) 78%
+    ),
+    linear-gradient(
+      to top,
+      var(--bg) 0%,
+      rgba(15, 23, 30, 0.55) 26%,
+      rgba(15, 23, 30, 0) 60%
+    );
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+}
+
+.hero-title {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.6px;
+  margin: 12px 0 14px 0;
+}
+
+.hero-overview {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin-bottom: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-fallback-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52vh;
+  border-bottom: 1px solid var(--border);
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-elevated),
+    var(--bg) 85%
+  );
+}
+
+.home-sliders {
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  .home-hero {
+    min-height: 60vh;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-overview {
+    font-size: 15px;
+    -webkit-line-clamp: 3;
+  }
+
+  .home-sliders {
+    padding-top: 24px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .home-hero {
+    min-height: 62vh;
+    padding-bottom: 28px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 25px;
+    margin: 10px 0 10px 0;
+  }
+
+  .hero-overview {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    -webkit-line-clamp: 4;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .hero-fallback-view {
+    min-height: 40vh;
+  }
+
+  .home-sliders {
+    padding-top: 20px;
+  }
+}

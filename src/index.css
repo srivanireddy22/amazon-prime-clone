@@ -1,0 +1,84 @@
+:root {
+  /* Prime Video palette */
+  --bg: #0f171e;
+  --bg-elevated: #1a242f;
+  --bg-hover: #232f3e;
+  --accent: #00a8e1;
+  --accent-hover: #33bcea;
+  --accent-dark: #007ea8;
+  --text: #ffffff;
+  --text-muted: #8197a4;
+  --text-dim: #aab7c4;
+  --border: #2b3a47;
+  --danger: #ff6b6b;
+  --radius: 4px;
+  --radius-lg: 8px;
+  --header-height: 62px;
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Amazon Ember', 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #35434f;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #46586a;
+}

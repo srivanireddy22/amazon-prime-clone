@@ -1,0 +1,79 @@
+.app-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px 24px 34px 24px;
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  background-color: #0d141b;
+}
+
+.social-icons-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.social-icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.social-icon-button:hover,
+.social-icon-button:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  font-size: 18px;
+}
+
+.contact-us-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.footer-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 575px) {
+  .app-footer {
+    padding: 32px 16px 26px 16px;
+    margin-top: 34px;
+  }
+
+  .social-icons-list {
+    gap: 14px;
+  }
+
+  .social-icon-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-icon {
+    font-size: 15px;
+  }
+
+  .contact-us-text {
+    font-size: 14px;
+  }
+}

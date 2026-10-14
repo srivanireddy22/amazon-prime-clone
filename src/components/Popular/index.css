@@ -1,0 +1,31 @@
+.popular-route {
+  padding-top: 32px;
+  padding-bottom: 20px;
+}
+
+.popular-heading {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.popular-subheading {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 6px 0 26px 0;
+}
+
+@media screen and (max-width: 575px) {
+  .popular-route {
+    padding-top: 22px;
+  }
+
+  .popular-heading {
+    font-size: 22px;
+  }
+
+  .popular-subheading {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+}

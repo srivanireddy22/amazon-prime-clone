@@ -1,0 +1,19 @@
+.details-loader-wrapper,
+.details-failure-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-elevated),
+    var(--bg) 85%
+  );
+}
+
+@media screen and (max-width: 575px) {
+  .details-loader-wrapper,
+  .details-failure-wrapper {
+    min-height: 55vh;
+  }
+}

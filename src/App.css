@@ -1,0 +1,184 @@
+/* Shared layout + view patterns used across every route */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.page-content {
+  flex-grow: 1;
+}
+
+.content-wrapper {
+  padding: 0 48px;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+/* Loader */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 220px;
+}
+
+/* Failure view */
+.failure-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 280px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.failure-image {
+  width: 130px;
+  max-width: 60%;
+  margin-bottom: 22px;
+}
+
+.failure-description {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-bottom: 22px;
+  max-width: 420px;
+}
+
+.retry-button {
+  background-color: var(--accent);
+  color: #0f171e;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 26px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.retry-button:hover,
+.retry-button:focus-visible {
+  background-color: var(--accent-hover);
+}
+
+/* Movies grid used by Popular, Search and Similar movies */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 22px 18px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movies-grid-item {
+  list-style-type: none;
+}
+
+/* Buttons */
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #0f171e;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 11px 26px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.primary-button:hover,
+.primary-button:focus-visible {
+  background-color: var(--accent-hover);
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 24px;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+.prime-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.prime-badge::before {
+  content: '';
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--accent);
+}
+
+@media screen and (max-width: 991px) {
+  .content-wrapper {
+    padding: 0 28px;
+  }
+
+  .section-heading {
+    font-size: 18px;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 18px 14px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .content-wrapper {
+    padding: 0 16px;
+  }
+
+  .section-heading {
+    font-size: 16px;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+    gap: 14px 10px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+}

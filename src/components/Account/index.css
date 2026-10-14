@@ -1,0 +1,144 @@
+.account-route {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 44px;
+  padding-bottom: 24px;
+}
+
+.account-heading {
+  width: 100%;
+  max-width: 720px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-bottom: 22px;
+}
+
+.account-card {
+  width: 100%;
+  max-width: 720px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.account-row {
+  display: flex;
+  gap: 24px;
+  padding: 24px 26px;
+}
+
+.account-row + .account-row {
+  border-top: 1px solid var(--border);
+}
+
+.account-label {
+  flex-shrink: 0;
+  width: 150px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.account-value-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.account-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.account-password {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.masked-password {
+  color: var(--text);
+  letter-spacing: 2px;
+}
+
+.plan-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.plan-badge {
+  margin: 0;
+  padding: 3px 9px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--accent);
+}
+
+.plan-description {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.logout-button {
+  width: 100%;
+  max-width: 720px;
+  height: 44px;
+  margin-top: 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: transparent;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.logout-button:hover,
+.logout-button:focus-visible {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #0f171e;
+}
+
+@media screen and (max-width: 575px) {
+  .account-route {
+    padding-top: 28px;
+  }
+
+  .account-heading {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .account-row {
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 18px;
+  }
+
+  .account-label {
+    width: auto;
+    font-size: 13px;
+  }
+
+  .account-value {
+    font-size: 15px;
+  }
+
+  .logout-button {
+    height: 40px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}

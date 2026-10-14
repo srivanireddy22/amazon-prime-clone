@@ -1,0 +1,149 @@
+.slider-section {
+  margin-bottom: 38px;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+/* Slick overrides */
+.slider-wrapper .slick-slider {
+  margin: 0 -6px;
+}
+
+.slider-wrapper .slick-list {
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.slider-wrapper .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+.slider-wrapper .slick-slide > div {
+  height: 100%;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 64px;
+  transform: translateY(-50%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: rgba(15, 23, 30, 0.88);
+  color: var(--text);
+  font-size: 28px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.slider-wrapper:hover .slider-arrow {
+  opacity: 1;
+}
+
+.slider-arrow:hover,
+.slider-arrow:focus-visible {
+  opacity: 1;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #0f171e;
+}
+
+.slider-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.prev-arrow {
+  left: -18px;
+}
+
+.next-arrow {
+  right: -18px;
+}
+
+.slider-wrapper .loader-container {
+  min-height: 210px;
+}
+
+.slider-failure-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 210px;
+  padding: 20px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-color: rgba(26, 36, 47, 0.5);
+  text-align: center;
+}
+
+.slider-failure-image {
+  width: 68px;
+  margin-bottom: 14px;
+}
+
+.slider-failure-description {
+  font-size: 15px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 991px) {
+  .slider-section {
+    margin-bottom: 30px;
+  }
+
+  .prev-arrow {
+    left: -10px;
+  }
+
+  .next-arrow {
+    right: -10px;
+  }
+
+  .slider-arrow {
+    width: 32px;
+    height: 52px;
+    font-size: 22px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .slider-section {
+    margin-bottom: 24px;
+  }
+
+  .slider-wrapper .slick-slider {
+    margin: 0 -4px;
+  }
+
+  .slider-arrow {
+    width: 26px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .prev-arrow {
+    left: -6px;
+  }
+
+  .next-arrow {
+    right: -6px;
+  }
+
+  .slider-wrapper .loader-container,
+  .slider-failure-view {
+    min-height: 160px;
+  }
+}
